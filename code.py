@@ -19,19 +19,22 @@ counter = 1
 for i in range(3, 1000, 1):
     if prime(i):
         primes.append(i)
+        x.append(i)
         difference_between_primes.append(counter)
         counter = 0
     else:
         counter += 1
-print difference_between_primes
+print (difference_between_primes)
 y = difference_between_primes
+"""
 for i in range(len(y)):
     x.append(i)
+"""
 # plotting points as a scatter plot
 plt.scatter(x, y, label="", color="green", marker="*", s=30)
 
-plt.xlabel('x - axis')
-plt.ylabel('y - axis')
+plt.ylabel('difference between the last prime and the prine itself')
+plt.xlabel('numbers')
 plt.title('difference between sequential primes')
 plt.legend()
 
